@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | CV. Parkin Production</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎤</text></svg>">
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        dark: {
+                            bg: '#0a0a0f',
+                            surface: '#151522',
+                            card: '#1e1e2d',
+                            border: '#2a2a3a',
+                            text: '#e2e8f0',
+                        }
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'slide-down': 'slideDown 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                        'shimmer': 'shimmer 2s infinite',
+                        'blob': 'blob 7s infinite',
+                        'spin-slow': 'spin 3s linear infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+                        'bounce-in': 'bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-1000px 0' },
+                            '100%': { backgroundPosition: '1000px 0' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        bounceIn: {
+                            '0%': { transform: 'scale(0.3)', opacity: '0' },
+                            '50%': { transform: 'scale(1.05)', opacity: '1' },
+                            '70%': { transform: 'scale(0.9)' },
+                            '100%': { transform: 'scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* ==========================================================================
+           PARKIN PRODUCTION - SUPER MODERN CUSTOM STYLES (EMBEDDED)
+           ========================================================================== */
+        /* ANIMATION DELAYS */
+        .animation-delay-100 { animation-delay: 100ms; }
+        .animation-delay-200 { animation-delay: 200ms; }
+        .animation-delay-300 { animation-delay: 300ms; }
+        .animation-delay-500 { animation-delay: 500ms; }
+        .animation-delay-700 { animation-delay: 700ms; }
+        .animation-delay-1000 { animation-delay: 1000ms; }
+        .animation-delay-2000 { animation-delay: 2000ms; }
+        .animation-delay-3000 { animation-delay: 3000ms; }
+
+        /* GRID PATTERN */
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        .dark .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(96, 165, 250, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(96, 165, 250, 0.05) 1px, transparent 1px);
+        }
+
+        /* LOADING SCREEN */
+        .loading-screen {
+            transition: opacity 0.5s ease;
+        }
+        .loading-spinner {
+            width: 120px;
+            height: 120px;
+        }
+
+        /* SCROLL PROGRESS */
+        .scroll-progress {
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        /* GLASS NAVIGATION */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+        }
+        .dark .glass-nav {
+            background: rgba(21, 21, 34, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* LOGO GRADIENT */
+        .logo-gradient {
+            background: linear-gradient(135deg, #3b82f6, #2563eb, #1d4ed8);
+        }
+
+        /* NAV LINK */
+        .nav-link {
+            position: relative;
+            padding: 0.75rem 1.25rem;
+            font-weight: 500;
+            color: #374151;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .dark .nav-link {
+            color: #d1d5db;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.2));
+            border-radius: 12px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+        .nav-link:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            border-radius: 3px;
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-link:hover::after {
+            width: 70%;
+        }
+        .nav-link.active {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        .dark .nav-link.active {
+            color: #60a5fa;
+        }
+        .nav-link.active::before {
+            opacity: 1;
+            transform: scale(1);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.25));
+        }
+        .nav-link.active::after {
+            width: 70%;
+        }
+
+        /* THEME TOGGLE BUTTON */
+        .theme-toggle-btn {
+            padding: 0.75rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .dark .theme-toggle-btn {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.1);
+            background: rgba(59, 130, 246, 0.2);
+        }
+
+        /* CTA BUTTON PRIMARY */
+        .cta-btn-primary {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #3b82f6, #2563eb, #1d4ed8);
+            color: white;
+            font-weight: 700;
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+        }
+        .cta-btn-primary:hover::before {
+            left: 100%;
+        }
+        .cta-btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        /* MOBILE MENU BUTTON */
+        .mobile-menu-btn {
+            padding: 0.75rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .dark .mobile-menu-btn {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* MOBILE MENU */
+        .mobile-menu {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 1rem;
+            margin-top: 1rem;
+            animation: slideDown 0.3s ease-out;
+        }
+        .dark .mobile-menu {
+            background: rgba(21, 21, 34, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* MOBILE NAV LINK */
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            color: #374151;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin: 0.25rem 0;
+        }
+        .dark .mobile-nav-link {
+            color: #d1d5db;
+        }
+        .mobile-nav-link:hover {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.2));
+            transform: translateX(5px);
+        }
+        .mobile-nav-link.active {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.25));
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        .dark .mobile-nav-link.active {
+            color: #60a5fa;
+        }
+
+        /* SECTION PADDING */
+        .section-py {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        /* SECTION HEADER */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        /* SECTION BADGE */
+        .section-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.25));
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #3b82f6;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        .dark .section-badge {
+            color: #60a5fa;
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        /* GRADIENT TEXT */
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* SECTION DESCRIPTION */
+        .section-description {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 48rem;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        .dark .section-description {
+            color: #94a3b8;
+        }
+
+        /* ABOUT CONTENT STYLES */
+        .about-content {
+            max-width: 56rem;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+        .dark .about-content {
+            color: #cbd5e1;
+        }
+        .about-content h3 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin: 2.5rem 0 1.5rem;
+            color: #1f2937;
+        }
+        .dark .about-content h3 {
+            color: #f1f5f9;
+        }
+        .about-content p {
+            margin-bottom: 1.25rem;
+        }
+
+        /* STATS CARD */
+        .stats-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+        .dark .stats-card {
+            background: rgba(30, 41, 59, 0.3);
+        }
+        .stats-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+
+        /* TIMELINE */
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 16px;
+            width: 2px;
+            height: calc(100% + 2rem);
+            background: linear-gradient(180deg, #3b82f6, transparent);
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        /* TEAM CARD */
+        .team-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .dark .team-card {
+            background: rgba(30, 41, 59, 0.3);
+        }
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        /* FOOTER SECTION */
+        .footer-section {
+            background: linear-gradient(to bottom, #111827, #000000);
+            color: #9ca3af;
+            padding-top: 6rem;
+            padding-bottom: 3rem;
+        }
+
+        /* FOOTER GRID */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* FOOTER LOGO */
+        .footer-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            font-size: 1.5rem;
+        }
+
+        /* FOOTER COMPANY NAME */
+        .footer-company-name {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        /* FOOTER COMPANY TAGLINE */
+        .footer-company-tagline {
+            font-size: 0.875rem;
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        /* FOOTER COMPANY DESCRIPTION */
+        .footer-company-description {
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 300px;
+        }
+
+        /* FOOTER SOCIAL */
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* SOCIAL ICON */
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER HEADING */
+        .footer-heading {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        /* FOOTER LINKS */
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        /* FOOTER LINK */
+        .footer-link {
+            color: #9ca3af;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 0;
+        }
+        .footer-link::before {
+            content: '›';
+            position: absolute;
+            left: -1rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            color: #3b82f6;
+        }
+        .footer-link:hover {
+            color: #3b82f6;
+            padding-left: 1rem;
+        }
+        .footer-link:hover::before {
+            opacity: 1;
+            left: 0;
+        }
+
+        /* FOOTER CONTACT */
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* FOOTER CONTACT ITEM */
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .footer-contact-item i {
+            margin-top: 0.25rem;
+        }
+
+        /* FOOTER BOTTOM */
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        /* BACK TO TOP BUTTON */
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            z-index: 90;
+        }
+        .back-to-top-btn.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .back-to-top-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            .section-py {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text transition-colors duration-500 overflow-x-hidden">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-blue-600 z-[9998] transform origin-left"></div>
+    <!-- Background Elements -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-blob"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="grid-pattern absolute inset-0 opacity-5"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 py-4 px-4 md:px-8 transition-all duration-500 header-scroll">
+        <div class="container mx-auto max-w-7xl">
+            <nav class="glass-nav rounded-2xl p-4 shadow-2xl">
+                <div class="flex justify-between items-center">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center space-x-3 group">
+                        <div class="relative">
+                            <div class="logo-gradient w-12 h-12 rounded-xl flex items-center justify-center shadow-2xl group-hover:shadow-primary-500/30 transition-all duration-500 group-hover:scale-110">
+                                <span class="text-white font-bold text-xl">PP</span>
+                            </div>
+                            <div class="absolute -inset-1 bg-gradient-to-r from-primary-600 to-blue-500 rounded-xl blur opacity-30 group-hover:opacity-70 transition duration-500"></div>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-black bg-gradient-to-r from-primary-600 via-blue-500 to-cyan-400 bg-clip-text text-transparent">PARKIN PRODUCTION</h1>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 font-medium tracking-widest">PROFESSIONAL EVENT SOLUTIONS</p>
+                        </div>
+                    </a>
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center space-x-1">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home mr-2"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="about.html" class="nav-link active">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="services.html" class="nav-link">
+                            <i class="fas fa-cogs mr-2"></i>
+                            <span>Services</span>
+                        </a>
+                        <a href="portfolio.html" class="nav-link">
+                            <i class="fas fa-images mr-2"></i>
+                            <span>Portfolio</span>
+                        </a>
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>Contact</span>
+                        </a>
+                        <!-- Theme Toggle -->
+                        <button id="themeToggle" class="theme-toggle-btn ml-4">
+                            <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+                        </button>
+                        <!-- CTA Button -->
+                        <a href="contact.html" class="cta-btn-primary ml-4">
+                            <span>GET QUOTE</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuButton" class="mobile-menu-btn lg:hidden">
+                        <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
+                    </button>
+                </div>
+                <!-- Mobile Navigation -->
+                <div id="mobileMenu" class="mobile-menu lg:hidden hidden mt-4">
+                    <div class="space-y-2">
+                        <a href="index.html" class="mobile-nav-link">
+                            <i class="fas fa-home mr-3"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="about.html" class="mobile-nav-link active">
+                            <i class="fas fa-info-circle mr-3"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="services.html" class="mobile-nav-link">
+                            <i class="fas fa-cogs mr-3"></i>
+                            <span>Services</span>
+                        </a>
+                        <a href="portfolio.html" class="mobile-nav-link">
+                            <i class="fas fa-images mr-3"></i>
+                            <span>Portfolio</span>
+                        </a>
+                        <a href="contact.html" class="mobile-nav-link">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>Contact</span>
+                        </a>
+                        <div class="pt-4 border-t border-gray-200 dark:border-gray-800">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-gray-600 dark:text-gray-400">Theme</span>
+                                <button id="themeToggleMobile" class="theme-toggle-btn">
+                                    <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+                                </button>
+                            </div>
+                            <a href="contact.html" class="block w-full cta-btn-primary text-center">
+                                <span>GET QUOTE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section-py pt-40">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="section-header animate-fade-in">
+                <div class="section-badge">TENTANG KAMI</div>
+                <h2 class="section-title">
+                    Mengenal Lebih Dekat <span class="gradient-text">Parkin Production</span>
+                </h2>
+                <p class="section-description">
+                    Kami berdedikasi untuk memberikan layanan produksi event berkelas dunia di seluruh Indonesia.
+                </p>
+            </div>
+
+            <!-- Company Introduction -->
+            <div class="animate-fade-in animation-delay-300 mb-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="mb-8">
+                            <h3 class="text-3xl font-bold mb-4">Kisah Kami</h3>
+                            <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                                CV. Parkin Production adalah perusahaan penyedia jasa produksi event profesional yang berbasis di Surabaya, Indonesia. Didirikan pada tahun 2009, kami telah melayani ratusan acara seperti konser musik, seminar korporat, pernikahan, festival, hingga acara pemerintahan.
+                            </p>
+                            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Dengan pengalaman lebih dari 15 tahun, kami telah membangun reputasi sebagai penyedia solusi produksi event yang andal, inovatif, dan berkualitas tinggi.
+                            </p>
+                        </div>
+                        <a href="contact.html" class="inline-block cta-btn-primary px-8 py-4 text-lg">
+                            <i class="fas fa-calendar-check mr-2"></i>
+                            <span>Pesan Layanan Kami</span>
+                        </a>
+                    </div>
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="images/profil.jpeg" 
+                                 alt="Parkin Production Event Setup" 
+                                 class="w-full h-96 object-cover transform transition duration-700 hover:scale-105">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-gradient-to-r from-primary-600 to-blue-500 text-white p-6 rounded-2xl shadow-2xl w-64 animate-float">
+                            <div class="text-4xl font-bold mb-2">15+</div>
+                            <div class="text-sm">Tahun Pengalaman</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision & Mission -->
+            <div class="mb-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="stats-card animate-slide-up">
+                        <div class="text-primary-600 dark:text-primary-400 text-5xl mb-4">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Visi Kami</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Menjadi penyedia solusi produksi event terkemuka di Asia Tenggara yang menggabungkan teknologi mutakhir dan kreativitas tanpa batas, memberikan pengalaman yang tak terlupakan bagi setiap klien.
+                        </p>
+                    </div>
+                    <div class="stats-card animate-slide-up animation-delay-200">
+                        <div class="text-primary-600 dark:text-primary-400 text-5xl mb-4">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Misi Kami</h3>
+                        <ul class="text-gray-600 dark:text-gray-300 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-500 mt-1 mr-3"></i>
+                                <span>Memberikan pelayanan produksi berkualitas tinggi dengan standar internasional.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-500 mt-1 mr-3"></i>
+                                <span>Mengutamakan kepuasan klien melalui komunikasi dan eksekusi yang presisi.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-500 mt-1 mr-3"></i>
+                                <span>Terus berinovasi dalam desain tata suara, pencahayaan, dan tata panggung.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-center mb-12">Our Achievement in Numbers</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center animate-bounce-in">
+                        <div class="text-5xl font-bold bg-gradient-to-r from-primary-600 to-blue-500 bg-clip-text text-transparent mb-2">500+</div>
+                        <div class="text-gray-600 dark:text-gray-300">Events Completed</div>
+                    </div>
+                    <div class="text-center animate-bounce-in animation-delay-200">
+                        <div class="text-5xl font-bold bg-gradient-to-r from-primary-600 to-blue-500 bg-clip-text text-transparent mb-2">200+</div>
+                        <div class="text-gray-600 dark:text-gray-300">Happy Clients</div>
+                    </div>
+                    <div class="text-center animate-bounce-in animation-delay-400">
+                        <div class="text-5xl font-bold bg-gradient-to-r from-primary-600 to-blue-500 bg-clip-text text-transparent mb-2">15</div>
+                        <div class="text-gray-600 dark:text-gray-300">Professional Staff</div>
+                    </div>
+                    <div class="text-center animate-bounce-in animation-delay-600">
+                        <div class="text-5xl font-bold bg-gradient-to-r from-primary-600 to-blue-500 bg-clip-text text-transparent mb-2">100%</div>
+                        <div class="text-gray-600 dark:text-gray-300">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Timeline -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-center mb-12">Our Journey</h3>
+                <div class="max-w-3xl mx-auto">
+                    <div class="timeline-item animate-slide-up">
+                        <div class="text-primary-600 dark:text-primary-400 font-bold mb-2">2009</div>
+                        <h4 class="text-xl font-bold mb-2">Founding Year</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Berawal dari passion terhadap dunia audio dan panggung, Parkin Production didirikan oleh Iyan Parkin sebagai usaha kecil di garasi rumah dengan peralatan sederhana.
+                        </p>
+                    </div>
+                    <div class="timeline-item animate-slide-up animation-delay-200">
+                        <div class="text-primary-600 dark:text-primary-400 font-bold mb-2">2012</div>
+                        <h4 class="text-xl font-bold mb-2">First Major Event</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Sukses mengelola acara konser pertama dengan kapasitas 5.000 orang, membangun reputasi sebagai penyedia jasa audio profesional.
+                        </p>
+                    </div>
+                    <div class="timeline-item animate-slide-up animation-delay-400">
+                        <div class="text-primary-600 dark:text-primary-400 font-bold mb-2">2016</div>
+                        <h4 class="text-xl font-bold mb-2">Expansion & Modernization</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Investasi besar dalam peralatan teknologi terbaru dan penambahan layanan pencahayaan serta panggung lengkap.
+                        </p>
+                    </div>
+                    <div class="timeline-item animate-slide-up animation-delay-600">
+                        <div class="text-primary-600 dark:text-primary-400 font-bold mb-2">2020 - Sekarang</div>
+                        <h4 class="text-xl font-bold mb-2">National Recognition</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Menjadi mitra produksi untuk berbagai acara nasional dan internasional, dengan tim profesional yang berpengalaman.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div>
+                <h3 class="text-3xl font-bold text-center mb-12">Meet Our Team</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="team-card p-6 animate-fade-in">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary-500/20">
+                            <img src="images/profil.jpeg" 
+                                 alt="Iyan Parkin" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold text-center mb-2">Iyan Parkin</h4>
+                        <div class="text-primary-600 dark:text-primary-400 text-center mb-4">Founder & CEO</div>
+                        <p class="text-gray-600 dark:text-gray-300 text-center">
+                            Dengan pengalaman 20+ tahun di industri event production, Iyan memimpin tim dengan visi dan inovasi.
+                        </p>
+                    </div>
+                    <div class="team-card p-6 animate-fade-in animation-delay-200">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary-500/20">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Sarah Wijaya" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold text-center mb-2">Sarah Wijaya</h4>
+                        <div class="text-primary-600 dark:text-primary-400 text-center mb-4">Creative Director</div>
+                        <p class="text-gray-600 dark:text-gray-300 text-center">
+                            Spesialis dalam desain pencahayaan dan tata panggung dengan latar belakang seni pertunjukan.
+                        </p>
+                    </div>
+                    <div class="team-card p-6 animate-fade-in animation-delay-400">
+                        <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary-500/20">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Budi Santoso" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold text-center mb-2">Budi Santoso</h4>
+                        <div class="text-primary-600 dark:text-primary-400 text-center mb-4">Technical Director</div>
+                        <p class="text-gray-600 dark:text-gray-300 text-center">
+                            Ahli dalam sistem audio dan rigging dengan sertifikasi internasional dan pengalaman 15+ tahun.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-company">
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="footer-logo">
+                            <span>PP</span>
+                        </div>
+                        <div>
+                            <h3 class="footer-company-name">PARKIN PRODUCTION</h3>
+                            <p class="footer-company-tagline">Professional Event Solutions</p>
+                        </div>
+                    </div>
+                    <p class="footer-company-description">
+                        Mengubah event menjadi pengalaman tak terlupakan dengan layanan produksi premium. Solusi audio, pencahayaan, dan panggung untuk segala acara.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Services -->
+                <div>
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#audio" class="footer-link">Audio Systems</a></li>
+                        <li><a href="services.html#lighting" class="footer-link">Lighting Design</a></li>
+                        <li><a href="services.html#staging" class="footer-link">Stage & Rigging</a></li>
+                        <li><a href="services.html" class="footer-link">All Services</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt text-primary-400 mt-1"></i>
+                            <span>Jl. Produksi No. 123, Surabaya, Indonesia</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-phone text-primary-400"></i>
+                            <span>+62 812 3456 7890</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-envelope text-primary-400"></i>
+                            <span>info@parkinproduction.com</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-clock text-primary-400"></i>
+                            <span>Mon-Sat: 9AM-6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CV. Parkin Production. All rights reserved.</p>
+                <p class="mt-2">Ujian Praktik KIK - XII RPL | Modern Web Design with Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // DOM Elements
+        const themeToggle = document.getElementById('themeToggle');
+        const themeToggleMobile = document.getElementById('themeToggleMobile');
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const backToTopBtn = document.getElementById('backToTop');
+        const scrollProgress = document.querySelector('.scroll-progress');
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initTheme();
+            initMobileMenu();
+            initScrollProgress();
+            initBackToTop();
+            initAnimations();
+        });
+
+        // Theme Management
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const html = document.documentElement;
+            if (savedTheme === 'dark') {
+                html.classList.add('dark');
+                updateThemeIcons('dark');
+            } else {
+                html.classList.remove('dark');
+                updateThemeIcons('light');
+            }
+            if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+            if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            if (isDark) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                updateThemeIcons('light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                updateThemeIcons('dark');
+            }
+            html.classList.add('theme-transition');
+            setTimeout(() => html.classList.remove('theme-transition'), 500);
+        }
+
+        function updateThemeIcons(theme) {
+            const icons = document.querySelectorAll('#themeToggle i, #themeToggleMobile i');
+            icons.forEach(icon => {
+                if (theme === 'dark') {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+
+        // Mobile Menu
+        function initMobileMenu() {
+            if (!mobileMenuButton || !mobileMenu) return;
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+        }
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMobileMenu() {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Scroll Progress
+        function initScrollProgress() {
+            if (!scrollProgress) return;
+            window.addEventListener('scroll', updateScrollProgress);
+        }
+
+        function updateScrollProgress() {
+            const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.pageYOffset / windowHeight) * 100;
+            if (scrollProgress) scrollProgress.style.transform = `scaleX(${scrolled / 100})`;
+        }
+
+        // Back to Top
+        function initBackToTop() {
+            if (!backToTopBtn) return;
+            window.addEventListener('scroll', toggleBackToTop);
+            backToTopBtn.addEventListener('click', scrollToTop);
+        }
+
+        function toggleBackToTop() {
+            backToTopBtn.classList.toggle('visible', window.pageYOffset > 300);
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Animation on scroll
+        function initAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-bounce-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements that should animate when in view
+            document.querySelectorAll('.stats-card, .team-card, .timeline-item').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Add CSS for theme transition
+        const style = document.createElement('style');
+        style.textContent = `
+            .theme-transition * {
+                transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease !important;
+            }
+            .header-scroll.scrolled {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(20px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+            .dark .header-scroll.scrolled {
+                background: rgba(10, 10, 15, 0.95);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | CV. Parkin Production</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎤</text></svg>">
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        dark: {
+                            bg: '#0a0a0f',
+                            surface: '#151522',
+                            card: '#1e1e2d',
+                            border: '#2a2a3a',
+                            text: '#e2e8f0',
+                        }
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'slide-down': 'slideDown 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                        'shimmer': 'shimmer 2s infinite',
+                        'blob': 'blob 7s infinite',
+                        'spin-slow': 'spin 3s linear infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+                        'bounce-in': 'bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-1000px 0' },
+                            '100%': { backgroundPosition: '1000px 0' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        bounceIn: {
+                            '0%': { transform: 'scale(0.3)', opacity: '0' },
+                            '50%': { transform: 'scale(1.05)', opacity: '1' },
+                            '70%': { transform: 'scale(0.9)' },
+                            '100%': { transform: 'scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* ==========================================================================
+           PARKIN PRODUCTION - SUPER MODERN CUSTOM STYLES (EMBEDDED)
+           ========================================================================== */
+        /* ANIMATION DELAYS */
+        .animation-delay-100 { animation-delay: 100ms; }
+        .animation-delay-200 { animation-delay: 200ms; }
+        .animation-delay-300 { animation-delay: 300ms; }
+        .animation-delay-500 { animation-delay: 500ms; }
+        .animation-delay-700 { animation-delay: 700ms; }
+        .animation-delay-1000 { animation-delay: 1000ms; }
+        .animation-delay-2000 { animation-delay: 2000ms; }
+        .animation-delay-3000 { animation-delay: 3000ms; }
+
+        /* GRID PATTERN */
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        .dark .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(96, 165, 250, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(96, 165, 250, 0.05) 1px, transparent 1px);
+        }
+
+        /* LOADING SCREEN */
+        .loading-screen {
+            transition: opacity 0.5s ease;
+        }
+        .loading-spinner {
+            width: 120px;
+            height: 120px;
+        }
+
+        /* SCROLL PROGRESS */
+        .scroll-progress {
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        /* GLASS NAVIGATION */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+        }
+        .dark .glass-nav {
+            background: rgba(21, 21, 34, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* LOGO GRADIENT */
+        .logo-gradient {
+            background: linear-gradient(135deg, #3b82f6, #2563eb, #1d4ed8);
+        }
+
+        /* NAV LINK */
+        .nav-link {
+            position: relative;
+            padding: 0.75rem 1.25rem;
+            font-weight: 500;
+            color: #374151;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .dark .nav-link {
+            color: #d1d5db;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.2));
+            border-radius: 12px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+        .nav-link:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            border-radius: 3px;
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-link:hover::after {
+            width: 70%;
+        }
+        .nav-link.active {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        .dark .nav-link.active {
+            color: #60a5fa;
+        }
+        .nav-link.active::before {
+            opacity: 1;
+            transform: scale(1);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.25));
+        }
+        .nav-link.active::after {
+            width: 70%;
+        }
+
+        /* THEME TOGGLE BUTTON */
+        .theme-toggle-btn {
+            padding: 0.75rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .dark .theme-toggle-btn {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.1);
+            background: rgba(59, 130, 246, 0.2);
+        }
+
+        /* CTA BUTTON PRIMARY */
+        .cta-btn-primary {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #3b82f6, #2563eb, #1d4ed8);
+            color: white;
+            font-weight: 700;
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+        }
+        .cta-btn-primary:hover::before {
+            left: 100%;
+        }
+        .cta-btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        /* MOBILE MENU BUTTON */
+        .mobile-menu-btn {
+            padding: 0.75rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .dark .mobile-menu-btn {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* MOBILE MENU */
+        .mobile-menu {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 1rem;
+            margin-top: 1rem;
+            animation: slideDown 0.3s ease-out;
+        }
+        .dark .mobile-menu {
+            background: rgba(21, 21, 34, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* MOBILE NAV LINK */
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            color: #374151;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin: 0.25rem 0;
+        }
+        .dark .mobile-nav-link {
+            color: #d1d5db;
+        }
+        .mobile-nav-link:hover {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.2));
+            transform: translateX(5px);
+        }
+        .mobile-nav-link.active {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.25));
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        .dark .mobile-nav-link.active {
+            color: #60a5fa;
+        }
+
+        /* SECTION PADDING */
+        .section-py {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        /* SECTION HEADER */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        /* SECTION BADGE */
+        .section-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.25));
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #3b82f6;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        .dark .section-badge {
+            color: #60a5fa;
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        /* GRADIENT TEXT */
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* SECTION DESCRIPTION */
+        .section-description {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 48rem;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        .dark .section-description {
+            color: #94a3b8;
+        }
+
+        /* SERVICE CARD */
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+        .dark .service-card {
+            background: rgba(30, 41, 59, 0.3);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        /* SERVICE ICON */
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.4s ease;
+        }
+
+        /* SERVICE FEATURE */
+        .service-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* PRICING CARD */
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .dark .pricing-card {
+            background: rgba(30, 41, 59, 0.3);
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        .pricing-card.popular {
+            border: 2px solid rgba(59, 130, 246, 0.5);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+        }
+
+        /* PROCESS STEP */
+        .process-step {
+            position: relative;
+            text-align: center;
+            padding: 1.5rem;
+        }
+        .process-step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* STATS CARD */
+        .stats-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+        .dark .stats-card {
+            background: rgba(30, 41, 59, 0.3);
+        }
+        .stats-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+
+        /* FOOTER SECTION */
+        .footer-section {
+            background: linear-gradient(to bottom, #111827, #000000);
+            color: #9ca3af;
+            padding-top: 6rem;
+            padding-bottom: 3rem;
+        }
+
+        /* FOOTER GRID */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* FOOTER LOGO */
+        .footer-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            font-size: 1.5rem;
+        }
+
+        /* FOOTER COMPANY NAME */
+        .footer-company-name {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        /* FOOTER COMPANY TAGLINE */
+        .footer-company-tagline {
+            font-size: 0.875rem;
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        /* FOOTER COMPANY DESCRIPTION */
+        .footer-company-description {
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 300px;
+        }
+
+        /* FOOTER SOCIAL */
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* SOCIAL ICON */
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER HEADING */
+        .footer-heading {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        /* FOOTER LINKS */
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        /* FOOTER LINK */
+        .footer-link {
+            color: #9ca3af;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 0;
+        }
+        .footer-link::before {
+            content: '›';
+            position: absolute;
+            left: -1rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            color: #3b82f6;
+        }
+        .footer-link:hover {
+            color: #3b82f6;
+            padding-left: 1rem;
+        }
+        .footer-link:hover::before {
+            opacity: 1;
+            left: 0;
+        }
+
+        /* FOOTER CONTACT */
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* FOOTER CONTACT ITEM */
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .footer-contact-item i {
+            margin-top: 0.25rem;
+        }
+
+        /* FOOTER BOTTOM */
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        /* BACK TO TOP BUTTON */
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            z-index: 90;
+        }
+        .back-to-top-btn.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .back-to-top-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            .section-py {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text transition-colors duration-500 overflow-x-hidden">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-blue-600 z-[9998] transform origin-left"></div>
+    <!-- Background Elements -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-blob"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="grid-pattern absolute inset-0 opacity-5"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 py-4 px-4 md:px-8 transition-all duration-500 header-scroll">
+        <div class="container mx-auto max-w-7xl">
+            <nav class="glass-nav rounded-2xl p-4 shadow-2xl">
+                <div class="flex justify-between items-center">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center space-x-3 group">
+                        <div class="relative">
+                            <div class="logo-gradient w-12 h-12 rounded-xl flex items-center justify-center shadow-2xl group-hover:shadow-primary-500/30 transition-all duration-500 group-hover:scale-110">
+                                <span class="text-white font-bold text-xl">PP</span>
+                            </div>
+                            <div class="absolute -inset-1 bg-gradient-to-r from-primary-600 to-blue-500 rounded-xl blur opacity-30 group-hover:opacity-70 transition duration-500"></div>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-black bg-gradient-to-r from-primary-600 via-blue-500 to-cyan-400 bg-clip-text text-transparent">PARKIN PRODUCTION</h1>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 font-medium tracking-widest">PROFESSIONAL EVENT SOLUTIONS</p>
+                        </div>
+                    </a>
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center space-x-1">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home mr-2"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="about.html" class="nav-link">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="services.html" class="nav-link active">
+                            <i class="fas fa-cogs mr-2"></i>
+                            <span>Services</span>
+                        </a>
+                        <a href="portfolio.html" class="nav-link">
+                            <i class="fas fa-images mr-2"></i>
+                            <span>Portfolio</span>
+                        </a>
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>Contact</span>
+                        </a>
+                        <!-- Theme Toggle -->
+                        <button id="themeToggle" class="theme-toggle-btn ml-4">
+                            <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+                        </button>
+                        <!-- CTA Button -->
+                        <a href="contact.html" class="cta-btn-primary ml-4">
+                            <span>GET QUOTE</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuButton" class="mobile-menu-btn lg:hidden">
+                        <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
+                    </button>
+                </div>
+                <!-- Mobile Navigation -->
+                <div id="mobileMenu" class="mobile-menu lg:hidden hidden mt-4">
+                    <div class="space-y-2">
+                        <a href="index.html" class="mobile-nav-link">
+                            <i class="fas fa-home mr-3"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="about.html" class="mobile-nav-link">
+                            <i class="fas fa-info-circle mr-3"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="services.html" class="mobile-nav-link active">
+                            <i class="fas fa-cogs mr-3"></i>
+                            <span>Services</span>
+                        </a>
+                        <a href="portfolio.html" class="mobile-nav-link">
+                            <i class="fas fa-images mr-3"></i>
+                            <span>Portfolio</span>
+                        </a>
+                        <a href="contact.html" class="mobile-nav-link">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>Contact</span>
+                        </a>
+                        <div class="pt-4 border-t border-gray-200 dark:border-gray-800">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-gray-600 dark:text-gray-400">Theme</span>
+                                <button id="themeToggleMobile" class="theme-toggle-btn">
+                                    <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+                                </button>
+                            </div>
+                            <a href="contact.html" class="block w-full cta-btn-primary text-center">
+                                <span>GET QUOTE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="section-py pt-40" id="services">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="section-header animate-fade-in">
+                <div class="section-badge">OUR SERVICES</div>
+                <h2 class="section-title">
+                    Premium <span class="gradient-text">Event Production</span> Solutions
+                </h2>
+                <p class="section-description">
+                    We provide comprehensive event production services with cutting-edge technology and professional expertise. From small gatherings to large-scale concerts, we've got you covered.
+                </p>
+            </div>
+
+            <!-- Main Services -->
+            <div class="mb-20">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Audio System -->
+                    <div id="audio" class="service-card p-8 animate-fade-in">
+                        <div class="service-icon bg-gradient-to-r from-primary-500/10 to-blue-500/10 text-primary-600 dark:text-primary-400">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Audio Systems</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            Complete sound solutions with professional audio equipment for crystal-clear sound quality. Perfect for concerts, conferences, and weddings.
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="service-feature">
+                                <i class="fas fa-check text-primary-500"></i>
+                                <span>High-end PA Systems</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check text-primary-500"></i>
+                                <span>Wireless Microphones</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check text-primary-500"></i>
+                                <span>Sound Mixing & Engineering</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check text-primary-500"></i>
+                                <span>Acoustic Consultation</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="cta-btn-primary inline-flex items-center">
+                            <span>Book Now</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Lighting Design -->
+                    <div id="lighting" class="service-card p-8 animate-fade-in animation-delay-200">
+                        <div class="service-icon bg-gradient-to-r from-primary-500/10 to-blue-500/10 text-primary-600 dark:text-primary-400">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Lighting Design</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            Creative lighting solutions that transform your event atmosphere. From ambient lighting to dynamic stage effects.
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="service-feature">
+                                <i class="fas fa-check text-primary-500"></i>
+                                <span>LED Stage Lighting</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check text-primary-500"></i>
+                                <span>Moving Head Lights</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check text-primary-500"></i>
+                                <span>Laser & Special Effects</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check text-primary-500"></i>
+                                <span>DMX Programming</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="cta-btn-primary inline-flex items-center">
+                            <span>Book Now</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Stage & Rigging -->
+                    <div id="staging" class="service-card p-8 animate-fade-in animation-delay-400">
+                        <div class="service-icon bg-gradient-to-r from-primary-500/10 to-blue-500/10 text-primary-600 dark:text-primary-400">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Stage & Rigging</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            Professional staging solutions including truss systems, backdrop setup, and safe rigging for all types of events.
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="service-feature">
+                                <i class="fas fa-check text-primary-500"></i>
+                                <span>Modular Stage Systems</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check text-primary-500"></i>
+                                <span>Truss & Rigging Setup</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check text-primary-500"></i>
+                                <span>Backdrop & Curtains</span>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check text-primary-500"></i>
+                                <span>Safety Certified Installation</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="cta-btn-primary inline-flex items-center">
+                            <span>Book Now</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Services -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-center mb-12">Additional Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="service-card p-6 animate-slide-up">
+                        <div class="text-primary-600 dark:text-primary-400 text-3xl mb-4">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Video Production</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Live streaming, projection mapping, and video wall setup for immersive visual experiences.
+                        </p>
+                    </div>
+                    <div class="service-card p-6 animate-slide-up animation-delay-100">
+                        <div class="text-primary-600 dark:text-primary-400 text-3xl mb-4">
+                            <i class="fas fa-broadcast-tower"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Broadcast</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Professional broadcasting services for live events and television productions.
+                        </p>
+                    </div>
+                    <div class="service-card p-6 animate-slide-up animation-delay-200">
+                        <div class="text-primary-600 dark:text-primary-400 text-3xl mb-4">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Technical Support</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            24/7 technical support and on-site engineers for seamless event execution.
+                        </p>
+                    </div>
+                    <div class="service-card p-6 animate-slide-up animation-delay-300">
+                        <div class="text-primary-600 dark:text-primary-400 text-3xl mb-4">
+                            <i class="fas fa-truck-loading"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Equipment Rental</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Flexible rental options for professional audio, lighting, and staging equipment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Packages -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-center mb-12">Service Packages</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="pricing-card animate-slide-up">
+                        <div class="text-center mb-8">
+                            <h4 class="text-2xl font-bold mb-4">Basic Package</h4>
+                            <div class="text-4xl font-bold mb-2">Rp 15<span class="text-lg text-gray-500">jt</span></div>
+                            <div class="text-gray-600 dark:text-gray-400">Per Event</div>
+                        </div>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-3"></i>
+                                <span>Basic Sound System</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-3"></i>
+                                <span>Standard Lighting</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-3"></i>
+                                <span>Small Stage Setup</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-times mr-3"></i>
+                                <span>Video Production</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-times mr-3"></i>
+                                <span>Broadcast Services</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="block w-full text-center py-3 border-2 border-primary-500 text-primary-500 font-bold rounded-xl hover:bg-primary-500 hover:text-white transition-colors">
+                            Choose Plan
+                        </a>
+                    </div>
+
+                    <div class="pricing-card popular animate-slide-up animation-delay-200">
+                        <div class="absolute top-0 right-0 bg-primary-500 text-white px-4 py-1 rounded-bl-lg">
+                            Most Popular
+                        </div>
+                        <div class="text-center mb-8">
+                            <h4 class="text-2xl font-bold mb-4">Premium Package</h4>
+                            <div class="text-4xl font-bold mb-2">Rp 35<span class="text-lg text-gray-500">jt</span></div>
+                            <div class="text-gray-600 dark:text-gray-400">Per Event</div>
+                        </div>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-3"></i>
+                                <span>Professional Sound System</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-3"></i>
+                                <span>Advanced Lighting Design</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-3"></i>
+                                <span>Full Stage Production</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-3"></i>
+                                <span>Basic Video Production</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <i class="fas fa-times mr-3"></i>
+                                <span>Broadcast Services</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="block w-full text-center py-3 bg-primary-500 text-white font-bold rounded-xl hover:bg-primary-600 transition-colors">
+                            Choose Plan
+                        </a>
+                    </div>
+
+                    <div class="pricing-card animate-slide-up animation-delay-400">
+                        <div class="text-center mb-8">
+                            <h4 class="text-2xl font-bold mb-4">Enterprise Package</h4>
+                            <div class="text-4xl font-bold mb-2">Rp 75<span class="text-lg text-gray-500">jt</span></div>
+                            <div class="text-gray-600 dark:text-gray-400">Per Event</div>
+                        </div>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-3"></i>
+                                <span>Premium Sound System</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-3"></i>
+                                <span>Complete Lighting Production</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-3"></i>
+                                <span>Full Stage & Rigging</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-3"></i>
+                                <span>Full Video Production</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-primary-500 mr-3"></i>
+                                <span>Broadcast Services</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="block w-full text-center py-3 border-2 border-primary-500 text-primary-500 font-bold rounded-xl hover:bg-primary-500 hover:text-white transition-colors">
+                            Choose Plan
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Section -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-center mb-12">Our Service Process</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="process-step animate-fade-in">
+                        <div class="process-step-number">1</div>
+                        <h4 class="text-xl font-bold mb-3">Consultation</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Understand your event needs and objectives through detailed discussions.
+                        </p>
+                    </div>
+                    <div class="process-step animate-fade-in animation-delay-200">
+                        <div class="process-step-number">2</div>
+                        <h4 class="text-xl font-bold mb-3">Planning</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Create custom production plans with technical specifications and timelines.
+                        </p>
+                    </div>
+                    <div class="process-step animate-fade-in animation-delay-400">
+                        <div class="process-step-number">3</div>
+                        <h4 class="text-xl font-bold mb-3">Execution</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Professional setup, operation, and management during your event.
+                        </p>
+                    </div>
+                    <div class="process-step animate-fade-in animation-delay-600">
+                        <div class="process-step-number">4</div>
+                        <h4 class="text-xl font-bold mb-3">Support</h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Post-event breakdown and ongoing technical support as needed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equipment Brands -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-center mb-12">Trusted Equipment Brands</h3>
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-8 items-center justify-center">
+                    <div class="text-center text-3xl font-bold text-gray-400 animate-pulse-slow">JBL</div>
+                    <div class="text-center text-3xl font-bold text-gray-400 animate-pulse-slow animation-delay-300">YAMAHA</div>
+                    <div class="text-center text-3xl font-bold text-gray-400 animate-pulse-slow animation-delay-600">SHURE</div>
+                    <div class="text-center text-3xl font-bold text-gray-400 animate-pulse-slow animation-delay-900">MARTIN</div>
+                    <div class="text-center text-3xl font-bold text-gray-400 animate-pulse-slow animation-delay-1200">COURT</div>
+                    <div class="text-center text-3xl font-bold text-gray-400 animate-pulse-slow animation-delay-1500">DENON</div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="bg-gradient-to-r from-primary-500/10 to-blue-500/10 rounded-3xl p-12 text-center animate-fade-in">
+                <h3 class="text-3xl font-bold mb-6">Ready to Elevate Your Event?</h3>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Contact us today for a customized quote and let's create an unforgettable experience together.
+                </p>
+                <a href="contact.html" class="cta-btn-primary px-8 py-4 text-lg inline-flex items-center">
+                    <i class="fas fa-calendar-alt mr-3"></i>
+                    <span>Get Your Custom Quote Now</span>
+                    <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-company">
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="footer-logo">
+                            <span>PP</span>
+                        </div>
+                        <div>
+                            <h3 class="footer-company-name">PARKIN PRODUCTION</h3>
+                            <p class="footer-company-tagline">Professional Event Solutions</p>
+                        </div>
+                    </div>
+                    <p class="footer-company-description">
+                        Mengubah event menjadi pengalaman tak terlupakan dengan layanan produksi premium. Solusi audio, pencahayaan, dan panggung untuk segala acara.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Services -->
+                <div>
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#audio" class="footer-link">Audio Systems</a></li>
+                        <li><a href="services.html#lighting" class="footer-link">Lighting Design</a></li>
+                        <li><a href="services.html#staging" class="footer-link">Stage & Rigging</a></li>
+                        <li><a href="services.html" class="footer-link">All Services</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt text-primary-400 mt-1"></i>
+                            <span>Jl. Produksi No. 123, Surabaya, Indonesia</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-phone text-primary-400"></i>
+                            <span>+62 812 3456 7890</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-envelope text-primary-400"></i>
+                            <span>info@parkinproduction.com</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-clock text-primary-400"></i>
+                            <span>Mon-Sat: 9AM-6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CV. Parkin Production. All rights reserved.</p>
+                <p class="mt-2">Ujian Praktik KIK - XII RPL | Modern Web Design with Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // DOM Elements
+        const themeToggle = document.getElementById('themeToggle');
+        const themeToggleMobile = document.getElementById('themeToggleMobile');
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const backToTopBtn = document.getElementById('backToTop');
+        const scrollProgress = document.querySelector('.scroll-progress');
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initTheme();
+            initMobileMenu();
+            initScrollProgress();
+            initBackToTop();
+            initAnimations();
+        });
+
+        // Theme Management
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const html = document.documentElement;
+            if (savedTheme === 'dark') {
+                html.classList.add('dark');
+                updateThemeIcons('dark');
+            } else {
+                html.classList.remove('dark');
+                updateThemeIcons('light');
+            }
+            if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+            if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            if (isDark) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                updateThemeIcons('light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                updateThemeIcons('dark');
+            }
+            html.classList.add('theme-transition');
+            setTimeout(() => html.classList.remove('theme-transition'), 500);
+        }
+
+        function updateThemeIcons(theme) {
+            const icons = document.querySelectorAll('#themeToggle i, #themeToggleMobile i');
+            icons.forEach(icon => {
+                if (theme === 'dark') {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+
+        // Mobile Menu
+        function initMobileMenu() {
+            if (!mobileMenuButton || !mobileMenu) return;
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+        }
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMobileMenu() {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Scroll Progress
+        function initScrollProgress() {
+            if (!scrollProgress) return;
+            window.addEventListener('scroll', updateScrollProgress);
+        }
+
+        function updateScrollProgress() {
+            const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.pageYOffset / windowHeight) * 100;
+            if (scrollProgress) scrollProgress.style.transform = `scaleX(${scrolled / 100})`;
+        }
+
+        // Back to Top
+        function initBackToTop() {
+            if (!backToTopBtn) return;
+            window.addEventListener('scroll', toggleBackToTop);
+            backToTopBtn.addEventListener('click', scrollToTop);
+        }
+
+        function toggleBackToTop() {
+            backToTopBtn.classList.toggle('visible', window.pageYOffset > 300);
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Animation on scroll
+        function initAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-bounce-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements that should animate when in view
+            document.querySelectorAll('.service-card, .pricing-card, .process-step, .stats-card').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Add CSS for theme transition
+        const style = document.createElement('style');
+        style.textContent = `
+            .theme-transition * {
+                transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease !important;
+            }
+            .header-scroll.scrolled {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(20px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+            .dark .header-scroll.scrolled {
+                background: rgba(10, 10, 15, 0.95);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

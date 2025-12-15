@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV. Parkin Production | Solusi Produksi Event Profesional</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎤</text></svg>">
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        dark: {
+                            bg: '#0a0a0f',
+                            surface: '#151522',
+                            card: '#1e1e2d',
+                            border: '#2a2a3a',
+                            text: '#e2e8f0',
+                        }
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'slide-down': 'slideDown 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                        'shimmer': 'shimmer 2s infinite',
+                        'blob': 'blob 7s infinite',
+                        'spin-slow': 'spin 3s linear infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-1000px 0' },
+                            '100%': { backgroundPosition: '1000px 0' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text transition-colors duration-500 overflow-x-hidden">
+    <!-- Loading Screen -->
+    <div class="loading-screen fixed inset-0 z-[9999] flex items-center justify-center bg-dark-bg">
+        <div class="loading-spinner relative">
+            <div class="absolute inset-0 border-4 border-primary-500/20 rounded-full"></div>
+            <div class="absolute inset-4 border-4 border-primary-500 border-t-transparent rounded-full animate-spin-slow"></div>
+            <div class="absolute inset-8 border-4 border-primary-600 border-b-transparent rounded-full animate-spin-slow animation-delay-500"></div>
+            <div class="text-center mt-24">
+                <div class="text-white font-bold text-xl mb-2">Parkin Production</div>
+                <div class="text-primary-400 text-sm">Memuat...</div>
+            </div>
+        </div>
+    </div>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-blue-600 z-[9998] transform origin-left"></div>
+    <!-- Background Elements -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-blob"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="absolute top-3/4 left-1/2 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+        <div class="grid-pattern absolute inset-0 opacity-5"></div>
+    </div>
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 py-4 px-4 md:px-8 transition-all duration-500">
+        <div class="container mx-auto max-w-7xl">
+            <nav class="glass-nav rounded-2xl p-4 shadow-2xl">
+                <div class="flex justify-between items-center">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center space-x-3 group">
+                        <div class="relative">
+                            <div class="logo-gradient w-12 h-12 rounded-xl flex items-center justify-center shadow-2xl group-hover:shadow-primary-500/30 transition-all duration-500 group-hover:scale-110">
+                                <span class="text-white font-bold text-xl">PP</span>
+                            </div>
+                            <div class="absolute -inset-1 bg-gradient-to-r from-primary-600 to-blue-500 rounded-xl blur opacity-30 group-hover:opacity-70 transition duration-500"></div>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-black bg-gradient-to-r from-primary-600 via-blue-500 to-cyan-400 bg-clip-text text-transparent">PARKIN PRODUCTION</h1>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 font-medium tracking-widest">SOLUSI EVENT PROFESIONAL</p>
+                        </div>
+                    </a>
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center space-x-1">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home mr-2"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="about.html" class="nav-link">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="services.html" class="nav-link">
+                            <i class="fas fa-cogs mr-2"></i>
+                            <span>Services</span>
+                        </a>
+                        <a href="portfolio.html" class="nav-link">
+                            <i class="fas fa-images mr-2"></i>
+                            <span>Portfolio</span>
+                        </a>
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>Contact</span>
+                        </a>
+                        <!-- Theme Toggle -->
+                        <button id="themeToggle" class="theme-toggle-btn ml-4">
+                            <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+                        </button>
+                        <!-- CTA Button -->
+                        <a href="contact.html" class="cta-btn-primary ml-4">
+                            <span>GET QUOTE</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuButton" class="mobile-menu-btn lg:hidden">
+                        <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
+                    </button>
+                </div>
+                <!-- Mobile Navigation -->
+                <div id="mobileMenu" class="mobile-menu lg:hidden hidden mt-4">
+                    <div class="space-y-2">
+                        <a href="index.html" class="mobile-nav-link active">
+                            <i class="fas fa-home mr-3"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="about.html" class="mobile-nav-link">
+                            <i class="fas fa-info-circle mr-3"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="services.html" class="mobile-nav-link">
+                            <i class="fas fa-cogs mr-3"></i>
+                            <span>Services</span>
+                        </a>
+                        <a href="portfolio.html" class="mobile-nav-link">
+                            <i class="fas fa-images mr-3"></i>
+                            <span>Portfolio</span>
+                        </a>
+                        <a href="contact.html" class="mobile-nav-link">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>Contact</span>
+                        </a>
+                        <div class="pt-4 border-t border-gray-200 dark:border-gray-800">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-gray-600 dark:text-gray-400">Theme</span>
+                                <button id="themeToggleMobile" class="theme-toggle-btn">
+                                    <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+                                </button>
+                            </div>
+                            <a href="contact.html" class="block w-full cta-btn-primary text-center">
+                                <span>GET QUOTE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen relative flex items-center pt-32 pb-20 px-4">
+        <div class="container mx-auto max-w-7xl relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="animate-fade-in">
+                    <!-- Badge dipindah ke posisi yang lebih terlihat -->
+                    <div class="hero-badge mb-6 mt-8">
+                        <div class="w-2 h-2 bg-primary-500 rounded-full mr-2 animate-pulse"></div>
+                        <span class="font-bold text-primary-600 dark:text-primary-400">PRODUKSI EVENT PREMIUM</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="block">TINGKATKAN</span>
+                        <span class="gradient-text-animated">PENGALAMAN EVENT ANDA</span>
+                    </h1>
+                    <p class="hero-description">
+                        Kami mengubah acara biasa menjadi pengalaman luar biasa dengan solusi audio, pencahayaan, dan panggung terkini. Layanan profesional untuk konser, acara korporat, hingga acara spesial.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <a href="services.html" class="hero-btn-primary">
+                            <span>JELAJAHI LAYANAN</span>
+                            <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                        <a href="portfolio.html" class="hero-btn-secondary">
+                            <i class="fas fa-play-circle"></i>
+                            <span>LHAT PORTOFOLIO</span>
+                        </a>
+                    </div>
+                    <!-- Stats -->
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">ACARA</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">TAHUN</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">KEPUASAN</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero Image/Visual -->
+                <div class="relative animate-float">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-primary-600 to-blue-500 rounded-3xl blur-2xl opacity-30"></div>
+                        <div class="hero-image-container">
+                            <img src="images/2.jpeg" 
+                                 alt="Produksi Konser" 
+                                 class="hero-image">
+                            <div class="hero-image-overlay"></div>
+                            <div class="hero-image-content">
+                                <div class="flex items-center space-x-3 mb-2">
+                                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-primary-600 to-blue-500 flex items-center justify-center">
+                                        <i class="fas fa-play text-white"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-white font-bold">TONTON DEMO</div>
+                                        <div class="text-gray-300 text-sm">Java Jazz Festival 2024</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating Elements -->
+                    <div class="floating-element audio">
+                        <i class="fas fa-volume-up text-white text-3xl"></i>
+                    </div>
+                    <div class="floating-element lighting">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Preview -->
+    <section class="section-py bg-gradient-to-b from-white via-blue-50/30 to-white dark:from-dark-bg dark:via-blue-900/10 dark:to-dark-bg">
+        <div class="container mx-auto max-w-7xl">
+            <div class="section-header">
+                <div class="section-badge">KEAHLIAN KAMI</div>
+                <h2 class="section-title">
+                    Layanan Produksi <span class="gradient-text">Premium</span>
+                </h2>
+                <p class="section-description">
+                    Solusi lengkap yang disesuaikan untuk semua jenis acara, dari pertemuan kecil hingga produksi berskala besar
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon bg-audio">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3 class="service-title">Audio Terbaik</h3>
+                    <p class="service-description">
+                        Sistem audio mutakhir dengan kualitas suara jernih sempurna untuk segala ukuran venue.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle text-green-500 mr-3"></i> Sistem Line Array</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-3"></i> Mixing Digital</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-3"></i> Solusi Nirkabel</li>
+                    </ul>
+                    <a href="services.html#audio" class="service-link">
+                        <span>Jelajahi Audio</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon bg-lighting">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="service-title">Desain Pencahayaan</h3>
+                    <p class="service-description">
+                        Pencahayaan dinamis yang menciptakan suasana dan menonjolkan momen penting acara Anda.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle text-green-500 mr-3"></i> Pencahayaan Cerdas</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-3"></i> Efek Laser</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-3"></i> Kontrol DMX</li>
+                    </ul>
+                    <a href="services.html#lighting" class="service-link">
+                        <span>Jelajahi Pencahayaan</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon bg-staging">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="service-title">Panggung & Rigging</h3>
+                    <p class="service-description">
+                        Solusi panggung profesional dengan desain kustom dan rigging bersertifikat.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle text-green-500 mr-3"></i> Panggung Modular</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-3"></i> Sistem Trussing</li>
+                        <li><i class="fas fa-check-circle text-green-500 mr-3"></i> Bersertifikat Aman</li>
+                    </ul>
+                    <a href="services.html#staging" class="service-link">
+                        <span>Jelajahi Panggung</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-16">
+                <a href="services.html" class="cta-btn-secondary">
+                    <span>LHAT SEMUA LAYANAN</span>
+                    <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Preview -->
+    <section class="section-py">
+        <div class="container mx-auto max-w-7xl">
+            <div class="section-header flex-col lg:flex-row lg:justify-between lg:items-end">
+                <div class="text-center lg:text-left mb-8 lg:mb-0">
+                    <div class="section-badge">KARYA KAMI</div>
+                    <h2 class="section-title">
+                        Proyek Unggulan <span class="gradient-text">Kami</span>
+                    </h2>
+                    <p class="section-description">
+                        Acara yang kami ubah dengan keahlian produksi kami
+                    </p>
+                </div>
+                <a href="portfolio.html" class="portfolio-cta-btn">
+                    <span>LHAT PORTOFOLIO</span>
+                    <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                </a>
+            </div>
+            <div class="portfolio-grid">
+                <a href="portfolio.html" class="portfolio-card">
+                    <div class="portfolio-image-container">
+                        <img src="images/1.jpeg" 
+                             alt="Produksi Konser" 
+                             class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <span class="portfolio-category">KONSER</span>
+                                <h3 class="portfolio-title">Java Jazz Festival 2024</h3>
+                                <p class="portfolio-description">Produksi lengkap dengan multi-panggung</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="portfolio.html" class="portfolio-card">
+                    <div class="portfolio-image-container">
+                        <img src="images/2.jpeg" 
+                             alt="Acara Korporat" 
+                             class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <span class="portfolio-category">KORPORAT</span>
+                                <h3 class="portfolio-title">Rapat Tahunan TechCorp</h3>
+                                <p class="portfolio-description">Sistem AV canggih untuk 1000+ peserta</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="portfolio.html" class="portfolio-card">
+                    <div class="portfolio-image-container">
+                        <img src="images/3.jpeg" 
+                             alt="Pernikahan" 
+                             class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <span class="portfolio-category">PERNIKAHAN</span>
+                                <h3 class="portfolio-title">Pernikahan Megah</h3>
+                                <p class="portfolio-description">Desain pencahayaan dan suara elegan</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="section-py bg-gradient-to-b from-gray-50 to-white dark:from-gray-900/30 dark:to-dark-bg">
+        <div class="container mx-auto max-w-7xl">
+            <div class="section-header">
+                <div class="section-badge">ULASAN KLIEN</div>
+                <h2 class="section-title">
+                    Apa Kata <span class="gradient-text">Klien Kami</span>
+                </h2>
+                <p class="section-description">
+                    Dipercaya oleh perusahaan dan penyelenggara acara terkemuka
+                </p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Parkin Production mengubah konferensi tahunan kami. Kualitas suara sempurna dan desain pencahayaannya menciptakan suasana ideal."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar bg-gradient-to-br from-blue-500 to-cyan-400">
+                            JD
+                        </div>
+                        <div>
+                            <h4 class="testimonial-name">John Doe</h4>
+                            <p class="testimonial-company">Direktur Acara, TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Profesional, tepat waktu, dan kualitas luar biasa. Konser kami tidak akan sama tanpa keahlian mereka."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar bg-gradient-to-br from-purple-500 to-pink-500">
+                            SJ
+                        </div>
+                        <div>
+                            <h4 class="testimonial-name">Sarah Johnson</h4>
+                            <p class="testimonial-company">Penyelenggara Festival Musik</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Dari perencanaan hingga eksekusi, timnya luar biasa. Mereka menjadikan hari pernikahan kami benar-benar magis."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar bg-gradient-to-br from-green-500 to-emerald-400">
+                            MW
+                        </div>
+                        <div>
+                            <h4 class="testimonial-name">Michael Williams</h4>
+                            <p class="testimonial-company">Wedding Planner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="section-py px-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="cta-container">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-600 via-blue-600 to-cyan-500"></div>
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
+                <div class="relative py-20 px-8 text-center">
+                    <h2 class="cta-title">
+                        Siap Tingkatkan <span class="cta-highlight">Event Berikutnya?</span>
+                    </h2>
+                    <p class="cta-description">
+                        Hubungi kami untuk penawaran personal dan mari ciptakan sesuatu yang luar biasa bersama
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+                        <a href="contact.html" class="cta-btn-white">
+                            <i class="fas fa-paper-plane mr-3"></i>
+                            DAPATKAN PENAWARAN
+                        </a>
+                        <a href="tel:+6281234567890" class="cta-btn-outline">
+                            <i class="fas fa-phone mr-3"></i>
+                            TELEPON SEKARANG
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container mx-auto max-w-7xl">
+            <div class="footer-grid">
+                <div class="footer-company">
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="footer-logo">
+                            <span>PP</span>
+                        </div>
+                        <div>
+                            <h3 class="footer-company-name">PARKIN PRODUCTION</h3>
+                            <p class="footer-company-tagline">Solusi Produksi Event Profesional</p>
+                        </div>
+                    </div>
+                    <p class="footer-company-description">
+                        Mengubah event menjadi pengalaman tak terlupakan dengan layanan produksi premium. Solusi audio, pencahayaan, dan panggung untuk segala acara.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#audio" class="footer-link">Audio Systems</a></li>
+                        <li><a href="services.html#lighting" class="footer-link">Lighting Design</a></li>
+                        <li><a href="services.html#staging" class="footer-link">Stage & Rigging</a></li>
+                        <li><a href="services.html" class="footer-link">All Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt text-primary-400 mt-1"></i>
+                            <span>Jl. Produksi No. 123, Surabaya, Indonesia</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-phone text-primary-400"></i>
+                            <span>+62 812 3456 7890</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-envelope text-primary-400"></i>
+                            <span>info@parkinproduction.com</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-clock text-primary-400"></i>
+                            <span>Mon–Sat: 09:00–18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CV. Parkin Production. All Rights Reserved.</p>
+                <p class="mt-2">Ujian Praktik KIK - XII RPL | Desain Web Modern dengan Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

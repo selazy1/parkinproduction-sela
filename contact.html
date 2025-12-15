@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | CV. Parkin Production</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎤</text></svg>">
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        dark: {
+                            bg: '#0a0a0f',
+                            surface: '#151522',
+                            card: '#1e1e2d',
+                            border: '#2a2a3a',
+                            text: '#e2e8f0',
+                        }
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'slide-down': 'slideDown 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                        'shimmer': 'shimmer 2s infinite',
+                        'blob': 'blob 7s infinite',
+                        'spin-slow': 'spin 3s linear infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+                        'bounce-in': 'bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+                        'ripple': 'ripple 0.6s linear',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-1000px 0' },
+                            '100%': { backgroundPosition: '1000px 0' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        bounceIn: {
+                            '0%': { transform: 'scale(0.3)', opacity: '0' },
+                            '50%': { transform: 'scale(1.05)', opacity: '1' },
+                            '70%': { transform: 'scale(0.9)' },
+                            '100%': { transform: 'scale(1)' },
+                        },
+                        ripple: {
+                            '0%': { width: '0px', height: '0px', opacity: '0.5' },
+                            '100%': { width: '500px', height: '500px', opacity: '0' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* ==========================================================================
+           PARKIN PRODUCTION - SUPER MODERN CUSTOM STYLES (EMBEDDED)
+           ========================================================================== */
+        /* ANIMATION DELAYS */
+        .animation-delay-100 { animation-delay: 100ms; }
+        .animation-delay-200 { animation-delay: 200ms; }
+        .animation-delay-300 { animation-delay: 300ms; }
+        .animation-delay-500 { animation-delay: 500ms; }
+        .animation-delay-700 { animation-delay: 700ms; }
+        .animation-delay-1000 { animation-delay: 1000ms; }
+        .animation-delay-2000 { animation-delay: 2000ms; }
+        .animation-delay-3000 { animation-delay: 3000ms; }
+
+        /* GRID PATTERN */
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        .dark .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(96, 165, 250, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(96, 165, 250, 0.05) 1px, transparent 1px);
+        }
+
+        /* GLASS NAVIGATION */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+        }
+        .dark .glass-nav {
+            background: rgba(21, 21, 34, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* LOGO GRADIENT */
+        .logo-gradient {
+            background: linear-gradient(135deg, #3b82f6, #2563eb, #1d4ed8);
+        }
+
+        /* NAV LINK */
+        .nav-link {
+            position: relative;
+            padding: 0.75rem 1.25rem;
+            font-weight: 500;
+            color: #374151;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .dark .nav-link {
+            color: #d1d5db;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.2));
+            border-radius: 12px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+        .nav-link:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            border-radius: 3px;
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-link:hover::after {
+            width: 70%;
+        }
+        .nav-link.active {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        .dark .nav-link.active {
+            color: #60a5fa;
+        }
+        .nav-link.active::before {
+            opacity: 1;
+            transform: scale(1);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.25));
+        }
+        .nav-link.active::after {
+            width: 70%;
+        }
+
+        /* THEME TOGGLE BUTTON */
+        .theme-toggle-btn {
+            padding: 0.75rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .dark .theme-toggle-btn {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.1);
+            background: rgba(59, 130, 246, 0.2);
+        }
+
+        /* CTA BUTTON PRIMARY */
+        .cta-btn-primary {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #3b82f6, #2563eb, #1d4ed8);
+            color: white;
+            font-weight: 700;
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+        }
+        .cta-btn-primary:hover::before {
+            left: 100%;
+        }
+        .cta-btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        /* MOBILE MENU BUTTON */
+        .mobile-menu-btn {
+            padding: 0.75rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .dark .mobile-menu-btn {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* MOBILE MENU */
+        .mobile-menu {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 1rem;
+            margin-top: 1rem;
+            animation: slideDown 0.3s ease-out;
+        }
+        .dark .mobile-menu {
+            background: rgba(21, 21, 34, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* MOBILE NAV LINK */
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            color: #374151;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin: 0.25rem 0;
+        }
+        .dark .mobile-nav-link {
+            color: #d1d5db;
+        }
+        .mobile-nav-link:hover {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.2));
+            transform: translateX(5px);
+        }
+        .mobile-nav-link.active {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.25));
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        .dark .mobile-nav-link.active {
+            color: #60a5fa;
+        }
+
+        /* SECTION PADDING */
+        .section-py {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        /* SECTION HEADER */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        /* SECTION BADGE */
+        .section-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.25));
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #3b82f6;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        .dark .section-badge {
+            color: #60a5fa;
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        /* GRADIENT TEXT */
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* SECTION DESCRIPTION */
+        .section-description {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 48rem;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        .dark .section-description {
+            color: #94a3b8;
+        }
+
+        /* CONTACT CARD */
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+        }
+        .dark .contact-card {
+            background: rgba(30, 41, 59, 0.3);
+        }
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+
+        /* CONTACT ICON */
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.3));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3b82f6;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        .dark .contact-icon {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(37, 99, 235, 0.4));
+            color: #60a5fa;
+        }
+
+        /* FORM INPUT */
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1.5px solid #e5e7eb;
+            background: rgba(255, 255, 255, 0.05);
+            color: #1f2937;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .dark .form-input {
+            background: rgba(30, 41, 59, 0.2);
+            border-color: #374151;
+            color: #f3f4f6;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+            transform: translateY(-2px);
+        }
+        .dark .form-input:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+
+        /* FORM LABEL */
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        .dark .form-label {
+            color: #d1d5db;
+        }
+
+        /* SUBMIT BUTTON */
+        .submit-btn {
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #3b82f6, #2563eb, #1d4ed8);
+            color: white;
+            font-weight: 700;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+        }
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        .submit-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        /* MAP CONTAINER */
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+        .map-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        /* FOOTER SECTION */
+        .footer-section {
+            background: linear-gradient(to bottom, #111827, #000000);
+            color: #9ca3af;
+            padding-top: 6rem;
+            padding-bottom: 3rem;
+        }
+
+        /* FOOTER GRID */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* FOOTER LOGO */
+        .footer-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            font-size: 1.5rem;
+        }
+
+        /* FOOTER COMPANY NAME */
+        .footer-company-name {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        /* FOOTER COMPANY TAGLINE */
+        .footer-company-tagline {
+            font-size: 0.875rem;
+            color: #6b7280;
+            font-weight: 600;
+        }
+
+        /* FOOTER COMPANY DESCRIPTION */
+        .footer-company-description {
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 300px;
+        }
+
+        /* FOOTER SOCIAL */
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* SOCIAL ICON */
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER HEADING */
+        .footer-heading {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        /* FOOTER LINKS */
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        /* FOOTER LINK */
+        .footer-link {
+            color: #9ca3af;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 0;
+        }
+        .footer-link::before {
+            content: '›';
+            position: absolute;
+            left: -1rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            color: #3b82f6;
+        }
+        .footer-link:hover {
+            color: #3b82f6;
+            padding-left: 1rem;
+        }
+        .footer-link:hover::before {
+            opacity: 1;
+            left: 0;
+        }
+
+        /* FOOTER CONTACT */
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* FOOTER CONTACT ITEM */
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .footer-contact-item i {
+            margin-top: 0.25rem;
+        }
+
+        /* FOOTER BOTTOM */
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        /* BACK TO TOP BUTTON */
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            z-index: 90;
+        }
+        .back-to-top-btn.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .back-to-top-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        /* RIPPLE EFFECT */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            animation: ripple 0.6s linear;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            .section-py {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+            .contact-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text transition-colors duration-500 overflow-x-hidden">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-blue-600 z-[9998] transform origin-left"></div>
+    <!-- Background Elements -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-blob"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="grid-pattern absolute inset-0 opacity-5"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 py-4 px-4 md:px-8 transition-all duration-500 header-scroll">
+        <div class="container mx-auto max-w-7xl">
+            <nav class="glass-nav rounded-2xl p-4 shadow-2xl">
+                <div class="flex justify-between items-center">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center space-x-3 group">
+                        <div class="relative">
+                            <div class="logo-gradient w-12 h-12 rounded-xl flex items-center justify-center shadow-2xl group-hover:shadow-primary-500/30 transition-all duration-500 group-hover:scale-110">
+                                <span class="text-white font-bold text-xl">PP</span>
+                            </div>
+                            <div class="absolute -inset-1 bg-gradient-to-r from-primary-600 to-blue-500 rounded-xl blur opacity-30 group-hover:opacity-70 transition duration-500"></div>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-black bg-gradient-to-r from-primary-600 via-blue-500 to-cyan-400 bg-clip-text text-transparent">PARKIN PRODUCTION</h1>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 font-medium tracking-widest">PROFESSIONAL EVENT SOLUTIONS</p>
+                        </div>
+                    </a>
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center space-x-1">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home mr-2"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="about.html" class="nav-link">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="services.html" class="nav-link">
+                            <i class="fas fa-cogs mr-2"></i>
+                            <span>Services</span>
+                        </a>
+                        <a href="portfolio.html" class="nav-link">
+                            <i class="fas fa-images mr-2"></i>
+                            <span>Portfolio</span>
+                        </a>
+                        <a href="contact.html" class="nav-link active">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>Contact</span>
+                        </a>
+                        <!-- Theme Toggle -->
+                        <button id="themeToggle" class="theme-toggle-btn ml-4">
+                            <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+                        </button>
+                        <!-- CTA Button -->
+                        <a href="contact.html#contact-form" class="cta-btn-primary ml-4">
+                            <span>GET QUOTE</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuButton" class="mobile-menu-btn lg:hidden">
+                        <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
+                    </button>
+                </div>
+                <!-- Mobile Navigation -->
+                <div id="mobileMenu" class="mobile-menu lg:hidden hidden mt-4">
+                    <div class="space-y-2">
+                        <a href="index.html" class="mobile-nav-link">
+                            <i class="fas fa-home mr-3"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="about.html" class="mobile-nav-link">
+                            <i class="fas fa-info-circle mr-3"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="services.html" class="mobile-nav-link">
+                            <i class="fas fa-cogs mr-3"></i>
+                            <span>Services</span>
+                        </a>
+                        <a href="portfolio.html" class="mobile-nav-link">
+                            <i class="fas fa-images mr-3"></i>
+                            <span>Portfolio</span>
+                        </a>
+                        <a href="contact.html" class="mobile-nav-link active">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>Contact</span>
+                        </a>
+                        <div class="pt-4 border-t border-gray-200 dark:border-gray-800">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-gray-600 dark:text-gray-400">Theme</span>
+                                <button id="themeToggleMobile" class="theme-toggle-btn">
+                                    <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+                                </button>
+                            </div>
+                            <a href="contact.html#contact-form" class="block w-full cta-btn-primary text-center">
+                                <span>GET QUOTE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section-py pt-40">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="section-header animate-fade-in">
+                <div class="section-badge">HUBUNGI KAMI</div>
+                <h2 class="section-title">
+                    Mari Berkolaborasi untuk <span class="gradient-text">Event Terbaik Anda</span>
+                </h2>
+                <p class="section-description">
+                    Tim kami siap membantu mewujudkan visi Anda. Hubungi kami untuk konsultasi gratis dan penawaran khusus.
+                </p>
+            </div>
+
+            <!-- Contact Information Cards -->
+            <div class="mb-20">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div class="contact-card animate-fade-in">
+                        <div class="contact-icon animate-float">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Kunjungi Kantor Kami</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Jl. Produksi No. 123, Kecamatan Tegalsari, Surabaya, Jawa Timur 60261
+                        </p>
+                        <a href="https://maps.google.com/?q=Jl.+Produksi+No.+123,+Surabaya" 
+                           target="_blank" 
+                           class="inline-flex items-center text-primary-600 dark:text-primary-400 font-medium hover:underline">
+                            <i class="fas fa-directions mr-2"></i>
+                            <span>Lihat di Google Maps</span>
+                        </a>
+                    </div>
+                    <div class="contact-card animate-fade-in animation-delay-200">
+                        <div class="contact-icon animate-float animation-delay-1000">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Hubungi Kami</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-2">
+                            <strong>Telepon:</strong> +62 812 3456 7890
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-2">
+                            <strong>WhatsApp:</strong> +62 812 3456 7890
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            <strong>Fax:</strong> (031) 567-8901
+                        </p>
+                        <a href="tel:+6281234567890" 
+                           class="inline-flex items-center text-primary-600 dark:text-primary-400 font-medium hover:underline">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span>Telepon Sekarang</span>
+                        </a>
+                    </div>
+                    <div class="contact-card animate-fade-in animation-delay-400">
+                        <div class="contact-icon animate-float animation-delay-2000">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Email & Jam Operasional</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-2">
+                            <strong>Email:</strong> info@parkinproduction.com
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-2">
+                            <strong>Penawaran:</strong> sales@parkinproduction.com
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            <strong>Jam Kerja:</strong> Senin - Sabtu, 09:00 - 18:00 WIB
+                        </p>
+                        <a href="mailto:info@parkinproduction.com" 
+                           class="inline-flex items-center text-primary-600 dark:text-primary-400 font-medium hover:underline">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            <span>Kirim Email</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form & Map -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="animate-slide-up">
+                        <div class="contact-card h-full">
+                            <h3 class="text-3xl font-bold mb-2" id="contact-form">Kirim Pesan</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-8">
+                                Isi formulir di bawah ini dan kami akan menghubungi Anda dalam waktu 24 jam.
+                            </p>
+                            <form id="contactForm" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="name" class="form-label">Nama Lengkap *</label>
+                                        <input type="text" 
+                                               id="name" 
+                                               class="form-input" 
+                                               placeholder="Masukkan nama lengkap"
+                                               required>
+                                    </div>
+                                    <div>
+                                        <label for="email" class="form-label">Email *</label>
+                                        <input type="email" 
+                                               id="email" 
+                                               class="form-input" 
+                                               placeholder="nama@email.com"
+                                               required>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="phone" class="form-label">Nomor Telepon *</label>
+                                    <input type="tel" 
+                                           id="phone" 
+                                           class="form-input" 
+                                           placeholder="+62 812 3456 7890"
+                                           required>
+                                </div>
+                                <div>
+                                    <label for="eventType" class="form-label">Jenis Acara *</label>
+                                    <select id="eventType" class="form-input" required>
+                                        <option value="" disabled selected>Pilih jenis acara</option>
+                                        <option value="concert">Konser Musik</option>
+                                        <option value="corporate">Acara Perusahaan</option>
+                                        <option value="wedding">Pernikahan</option>
+                                        <option value="festival">Festival</option>
+                                        <option value="government">Acara Pemerintahan</option>
+                                        <option value="other">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="message" class="form-label">Pesan *</label>
+                                    <textarea id="message" 
+                                              class="form-input min-h-[150px]" 
+                                              placeholder="Ceritakan tentang acara yang akan Anda selenggarakan..."
+                                              required></textarea>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" 
+                                           id="consent" 
+                                           class="w-5 h-5 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+                                           required>
+                                    <label for="consent" class="ml-3 text-gray-700 dark:text-gray-300">
+                                        Saya setuju dengan <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">kebijakan privasi</a> dan penyimpanan data saya.
+                                    </label>
+                                </div>
+                                <button type="submit" class="submit-btn w-full md:w-auto">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span>Kirim Pesan</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Map & Additional Info -->
+                    <div class="space-y-8 animate-slide-up animation-delay-300">
+                        <!-- Map -->
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6">Lokasi Kantor Kami</h3>
+                            <div class="map-container">
+                                <!-- Placeholder for Google Maps - Replace with actual embed code -->
+                                <div class="h-96 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <i class="fas fa-map-marked-alt text-6xl text-primary-500 mb-4"></i>
+                                        <p class="text-lg font-semibold">Google Maps Integration</p>
+                                        <p class="text-gray-600 dark:text-gray-400 mt-2">Jl. Produksi No. 123, Surabaya</p>
+                                        <a href="https://maps.google.com/?q=Jl.+Produksi+No.+123,+Surabaya" 
+                                           target="_blank" 
+                                           class="inline-block mt-4 px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition">
+                                            Buka di Google Maps
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="mb-20">
+                <h3 class="text-3xl font-bold text-center mb-12">Pertanyaan yang Sering Diajukan</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="contact-card animate-slide-up">
+                        <h4 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-question-circle text-primary-600 mr-3"></i>
+                            Berapa lama waktu respon untuk penawaran?
+                        </h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Kami akan merespon permintaan penawaran dalam waktu 24 jam kerja. Untuk kebutuhan mendesak, Anda dapat menghubungi kontak darurat kami.
+                        </p>
+                    </div>
+                    <div class="contact-card animate-slide-up animation-delay-200">
+                        <h4 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-question-circle text-primary-600 mr-3"></i>
+                            Apakah tersedia layanan di luar kota?
+                        </h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Ya, kami melayani seluruh Indonesia. Tim kami akan melakukan survey lokasi dan memberikan penawaran yang sesuai dengan kebutuhan Anda.
+                        </p>
+                    </div>
+                    <div class="contact-card animate-slide-up animation-delay-400">
+                        <h4 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-question-circle text-primary-600 mr-3"></i>
+                            Apa saja persiapan yang perlu dilakukan sebelum konsultasi?
+                        </h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Siapkan informasi tentang tanggal, lokasi, jumlah peserta, dan konsep acara. Jika ada referensi desain atau kebutuhan khusus, dapat dibagikan kepada kami.
+                        </p>
+                    </div>
+                    <div class="contact-card animate-slide-up animation-delay-600">
+                        <h4 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-question-circle text-primary-600 mr-3"></i>
+                            Bagaimana sistem pembayaran yang berlaku?
+                        </h4>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Kami menerima pembayaran via transfer bank, virtual account, dan kartu kredit. Pembayaran dilakukan dengan sistem down payment sebelum acara dan pelunasan setelah acara selesai.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="text-center">
+                <h3 class="text-3xl font-bold mb-8">Ikuti Kami di Media Sosial</h3>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10">
+                    Dapatkan update terbaru tentang proyek kami, tips event planning, dan penawaran khusus melalui media sosial.
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="social-icon w-16 h-16">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <a href="#" class="social-icon w-16 h-16">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="#" class="social-icon w-16 h-16">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                    <a href="#" class="social-icon w-16 h-16">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                    <a href="#" class="social-icon w-16 h-16">
+                        <i class="fab fa-tiktok text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-company">
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="footer-logo">
+                            <span>PP</span>
+                        </div>
+                        <div>
+                            <h3 class="footer-company-name">PARKIN PRODUCTION</h3>
+                            <p class="footer-company-tagline">Professional Event Solutions</p>
+                        </div>
+                    </div>
+                    <p class="footer-company-description">
+                        Mengubah event menjadi pengalaman tak terlupakan dengan layanan produksi premium. Solusi audio, pencahayaan, dan panggung untuk segala acara.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Services -->
+                <div>
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#audio" class="footer-link">Audio Systems</a></li>
+                        <li><a href="services.html#lighting" class="footer-link">Lighting Design</a></li>
+                        <li><a href="services.html#staging" class="footer-link">Stage & Rigging</a></li>
+                        <li><a href="services.html" class="footer-link">All Services</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt text-primary-400 mt-1"></i>
+                            <span>Jl. Produksi No. 123, Surabaya, Indonesia</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-phone text-primary-400"></i>
+                            <span>+62 812 3456 7890</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-envelope text-primary-400"></i>
+                            <span>info@parkinproduction.com</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <i class="fas fa-clock text-primary-400"></i>
+                            <span>Mon-Sat: 9AM-6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CV. Parkin Production. All rights reserved.</p>
+                <p class="mt-2">Ujian Praktik KIK - XII RPL | Modern Web Design with Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // DOM Elements
+        const themeToggle = document.getElementById('themeToggle');
+        const themeToggleMobile = document.getElementById('themeToggleMobile');
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const backToTopBtn = document.getElementById('backToTop');
+        const scrollProgress = document.querySelector('.scroll-progress');
+        const contactForm = document.getElementById('contactForm');
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initTheme();
+            initMobileMenu();
+            initScrollProgress();
+            initBackToTop();
+            initContactForm();
+            initAnimations();
+            initRippleEffect();
+        });
+
+        // Theme Management
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const html = document.documentElement;
+            if (savedTheme === 'dark') {
+                html.classList.add('dark');
+                updateThemeIcons('dark');
+            } else {
+                html.classList.remove('dark');
+                updateThemeIcons('light');
+            }
+            if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+            if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            if (isDark) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                updateThemeIcons('light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                updateThemeIcons('dark');
+            }
+            html.classList.add('theme-transition');
+            setTimeout(() => html.classList.remove('theme-transition'), 500);
+        }
+
+        function updateThemeIcons(theme) {
+            const icons = document.querySelectorAll('#themeToggle i, #themeToggleMobile i');
+            icons.forEach(icon => {
+                if (theme === 'dark') {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+        }
+
+        // Mobile Menu
+        function initMobileMenu() {
+            if (!mobileMenuButton || !mobileMenu) return;
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
+        }
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMobileMenu() {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Scroll Progress
+        function initScrollProgress() {
+            if (!scrollProgress) return;
+            window.addEventListener('scroll', updateScrollProgress);
+        }
+
+        function updateScrollProgress() {
+            const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.pageYOffset / windowHeight) * 100;
+            if (scrollProgress) scrollProgress.style.transform = `scaleX(${scrolled / 100})`;
+        }
+
+        // Back to Top
+        function initBackToTop() {
+            if (!backToTopBtn) return;
+            window.addEventListener('scroll', toggleBackToTop);
+            backToTopBtn.addEventListener('click', scrollToTop);
+        }
+
+        function toggleBackToTop() {
+            backToTopBtn.classList.toggle('visible', window.pageYOffset > 300);
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Contact Form
+        function initContactForm() {
+            if (!contactForm) return;
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    eventType: document.getElementById('eventType').value,
+                    message: document.getElementById('message').value
+                };
+                
+                // Here you would typically send the data to a server
+                // For now, we'll just show a success message
+                showFormSuccess();
+            });
+        }
+
+        function showFormSuccess() {
+            // Create success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'fixed top-6 right-6 z-[9999] bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 text-green-800 dark:text-green-200 px-6 py-4 rounded-2xl shadow-2xl animate-slide-down';
+            successMessage.innerHTML = `
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-2xl mr-3"></i>
+                    <div>
+                        <h4 class="font-bold text-lg">Pesan Terkirim!</h4>
+                        <p class="text-sm">Terima kasih telah menghubungi kami. Tim kami akan merespon dalam waktu 24 jam.</p>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(successMessage);
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Remove message after 5 seconds
+            setTimeout(() => {
+                successMessage.remove();
+            }, 5000);
+        }
+
+        // Animation on scroll
+        function initAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-bounce-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements that should animate when in view
+            document.querySelectorAll('.contact-card, .faq-item').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Ripple Effect
+        function initRippleEffect() {
+            document.addEventListener('click', function(e) {
+                // Only apply to buttons with ripple effect
+                if (e.target.closest('.submit-btn, .cta-btn-primary, .theme-toggle-btn')) {
+                    const btn = e.target.closest('.submit-btn, .cta-btn-primary, .theme-toggle-btn');
+                    createRipple(e, btn);
+                }
+            });
+        }
+
+        function createRipple(e, element) {
+            const ripple = document.createElement('span');
+            const rect = element.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple');
+            
+            element.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
+        // Add CSS for theme transition
+        const style = document.createElement('style');
+        style.textContent = `
+            .theme-transition * {
+                transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease !important;
+            }
+            .header-scroll.scrolled {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(20px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+            .dark .header-scroll.scrolled {
+                background: rgba(10, 10, 15, 0.95);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
